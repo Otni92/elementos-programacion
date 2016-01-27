@@ -18,8 +18,8 @@ public class ServletAutenticar extends HttpServlet {
     
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-     PrintWriter out= response.getWriter();
-     out.println("Este es un servlet con el metodo post");
+    String login= request.getParameter("login");
+    String password= request.getParameter("password");
+    
     }
 }
