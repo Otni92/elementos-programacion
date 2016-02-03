@@ -27,7 +27,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" + "id=" + id + ", login=" + login + ", password=" + password + '}';
+        return "Usuario que da el metodo toString:" + "id=" + id + ", login=" + login + ", password=" + password + '}';
     }
 
     @Override

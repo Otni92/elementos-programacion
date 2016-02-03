@@ -16,17 +16,13 @@ import org.hibernate.Transaction;
 public class ProbarEntidades {
     public static void main (String[] args){
         try{
-        //Paso 1 General el seasion Factory
-        SessionFactory fuck=HibernateUtilidades.getSessionFactory();
-        Session sesion= fuck.openSession();
-        Transaction tranza= sesion.beginTransaction();
-        //ahora si veran lo que nunca en su vida en su vida an visto 
-        Usuario usuario=new Usuario("martinez", "yomero");
-        sesion.save(usuario);
-        tranza.commit();
-        sesion.close();
-            System.out.println("usuario guardado con exito");
+            /*
+           DAOUsuario dao=new DAOUsuario();
+           Usuario u=new Usuario("Otniel", "Martinez");
+           dao.guardar(u);*/
+            System.out.println("Transaccion Exitosa:"+dao.buscarPorId(1));
     }catch(Exception e){
+            System.out.println(e.getMessage());
     }
   }
 }
