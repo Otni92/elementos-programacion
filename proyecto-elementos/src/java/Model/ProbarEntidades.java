@@ -16,10 +16,10 @@ import org.hibernate.Transaction;
 public class ProbarEntidades {
     public static void main (String[] args){
         try{
-            /*
+            
            DAOUsuario dao=new DAOUsuario();
            Usuario u=new Usuario("Otniel", "Martinez");
-           dao.guardar(u);*/
+           dao.guardar(u);
             System.out.println("Transaccion Exitosa:"+dao.buscarPorId(1));
     }catch(Exception e){
             System.out.println(e.getMessage());
