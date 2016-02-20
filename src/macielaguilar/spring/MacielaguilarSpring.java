@@ -25,6 +25,7 @@ public class MacielaguilarSpring {
     public static void main(String[] args) {
         // TODO code application logic here
         SpringApplication.run(MacielaguilarSpring.class, args);
+        
     }
     
 }
