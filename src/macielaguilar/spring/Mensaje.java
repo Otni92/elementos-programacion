@@ -5,13 +5,30 @@
  */
 package macielaguilar.spring;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  *
  * @author T-101
  */
+@Entity 
+//Aqui se mapea la tabla 
+@Table(name = "MENSAJE")
 public class Mensaje {
+    @Column(name = "titulo")
     private String titulo;
+    @Column(name = "cuerpo")
     private String cuerpo;
+    @Id
+    @GeneratedValue
+    @Column(name = "id_mensaje")
+    private Integer id;
+    
+    
 
     public String getTitulo() {
         return titulo;
@@ -27,6 +44,14 @@ public class Mensaje {
 
     public void setCuerpo(String cuerpo) {
         this.cuerpo = cuerpo;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
     
     
