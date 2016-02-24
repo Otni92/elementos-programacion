@@ -26,7 +26,7 @@ public class Controladormensaje {
         
     
         //esto va ser optenido a travez de dao mensaje
-        Mensaje m1=new Mensaje();
+        /*Mensaje m1=new Mensaje();
         m1.setTitulo("springboot");
         m1.setCuerpo("springboot");
         
@@ -45,7 +45,11 @@ public class Controladormensaje {
         //Vamos a usar una clase que se llame objetMapper
         ObjectMapper mapper= new ObjectMapper();
         return mapper .writeValueAsString(arreglo);
+        */
         
+        DAOMensaje dao = new DAOMensaje();
+        ObjectMapper mapper = new ObjectMapper();
+        return mapper.writeValueAsString(dao.buscarTodos());
     }
     
 }
